@@ -143,9 +143,19 @@ h3 {
     border-radius: 7px;
 }
 
+/* Step 15: display: flex places the contact details and the PDF link group
+   side by side, flex-wrap: wrap lets the second group drop below the first
+   on a narrow window, justify-content: space-between pushes them to the left
+   and right edges, align-items: flex-start lines up their tops, and gap: 24px
+   keeps at least 24 pixels between them. */
 .contact {
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
 }
 
 .site-footer a {
