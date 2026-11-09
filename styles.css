@@ -37,8 +37,13 @@ a {
     color: white;
 }
 
+/* Step 10: width: 100% makes the image as wide as the hero section so it
+   follows the page width, and height: auto keeps the turtle's proportions.
+   display: block removes the small gap an inline image leaves below itself. */
 .hero img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Supplied hero headline and call to action; no lab changes needed. */
