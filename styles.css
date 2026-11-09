@@ -134,6 +134,9 @@ h3 {
     margin-bottom: 6px;
 }
 
+/* Step 19: margin-top: auto grows the top margin to fill the empty space
+   above the action link, which pushes the link to the bottom of the card so
+   the links in a row line up even when the descriptions differ in length. */
 .course-card .button {
     display: inline-block;
     background: #1565a8;
@@ -141,6 +144,7 @@ h3 {
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 7px;
+    margin-top: auto;
 }
 
 /* Step 15: display: flex places the contact details and the PDF link group
@@ -207,4 +211,29 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+/* ----- Steps 16 and 17: Medium breakpoint (media query) ----- */
+
+/* At 768 pixels and wider, flex-basis: 40% replaces the cards' 100% starting
+   width so two cards fit on each row with the 20-pixel gap. flex-grow: 1 lets
+   the cards on a row stretch to fill it, and flex-shrink: 1 lets them get
+   narrower when a row is too tight. */
+@media (min-width: 768px) {
+    .course-card {
+        flex-basis: 40%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}
+
+/* ----- Step 18: Large breakpoint (media query) ----- */
+
+/* At 992 pixels and wider, flex-basis: 20% replaces the 40%, so four cards
+   use 80% of the row and the three gaps fill the rest. Both queries match
+   here, and this later one wins. */
+@media (min-width: 992px) {
+    .course-card {
+        flex-basis: 20%;
+    }
 }
