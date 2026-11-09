@@ -142,3 +142,32 @@ h3 {
 /* Steps 11–13: Add the course-grid container, then card declarations inside the existing .course-card rule. */
 /* Step 15: Add footer layout declarations inside the existing .contact rule (Step 14 adds the PDF link in index.html). */
 /* Steps 16–19: Add the media queries at the bottom of the file; Steps 17 and 19 add declarations to existing rules. */
+
+/* ----- Steps 4 to 7 and 9: Header (class) ----- */
+
+/* display: flex puts the header's two children, the brand and the
+   navigation, side by side in one row. justify-content: space-between
+   pushes the brand to the left edge and the navigation to the right edge,
+   align-items: center lines them up vertically in the middle of the header,
+   gap: 1rem keeps at least 1rem between them when the window is narrow, and
+   flex-wrap: wrap lets the navigation drop below the brand when both do not
+   fit on one line. */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ----- Steps 8 and 9: Navigation (class) ----- */
+
+/* display: flex places the three links side by side, gap: 0.75rem spaces
+   them apart, and flex-wrap: wrap lets the links move to a second line when
+   the window is too narrow for all three. This gap is separate from the
+   header's gap. */
+.site-nav {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
