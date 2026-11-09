@@ -106,12 +106,23 @@ h3 {
     line-height: 1.2;
 }
 
+/* Steps 12 and 13: flex-basis: 100% starts each card at the full width of
+   .course-grid so the four cards stack one per row on a phone. display: flex
+   and flex-direction: column make each card a container that stacks its icon,
+   heading, description and action top to bottom. align-items: flex-start
+   keeps the action link at its natural width on the left, and min-width: 0
+   lets the card shrink instead of staying wide because of long content. */
 .course-card {
     background: white;
     border: 1px solid #c3d8ee;
     border-radius: 12px;
     padding: 22px;
     box-shadow: 0 3px 10px #0a2f5c16;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
 }
 
 .course-card i {
@@ -175,4 +186,15 @@ h3 {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
+}
+
+/* ----- Step 11: Course card container (class) ----- */
+
+/* display: flex makes the four article cards flex items that sit side by
+   side, flex-wrap: wrap lets a card move to a new row when it does not fit,
+   and gap: 20px puts 20 pixels between the cards and between the rows. */
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
